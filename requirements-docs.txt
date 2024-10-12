@@ -1,0 +1,9 @@
+# -e .
+mkdocs==1.4.3
+mkdocs-material==9.1.16
+mdx-include >=1.4.1,<2.0.0
+mkdocs-markdownextradata-plugin >=0.1.7,<0.3.0
+cligenius-cli >=0.0.13
+cligenius[all] >=0.12.3
+pyyaml >=5.3.1,<7.0.0
+

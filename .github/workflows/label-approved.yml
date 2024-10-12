@@ -1,0 +1,26 @@
+name: Label Approved
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  issue_comment:
+    types:
+      - created
+
+jobs:
+  label-approved:
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: docker://khulnasoft/label-approved:0.0.2
+      - uses: khulnasoft/label-approved@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          debug: true
+          # config: >
+          #   {
+          #     "approved-1":
+          #       {
+          #         "await_label": "awaiting review",
+          #         "number": 1
+          #       }
+          #   }
